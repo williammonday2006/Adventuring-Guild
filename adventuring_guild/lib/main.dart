@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'party_model.dart';
 import 'guild_hall_roster.dart';
+import 'quest_party_summary.dart';
 
 void main() {
   runApp(
@@ -28,7 +29,24 @@ class MyApp extends StatelessWidget {
           title: const Text('Adventuring Guild'),
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
-        body: const GuildHallRoster(),
+        body: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(12),
+              child: Text(
+                'Guild Hall Roster',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            const Expanded(
+              child: GuildHallRoster(),
+            ),
+            const QuestPartySummary(),
+          ],
+        ),
       ),
     );
   }

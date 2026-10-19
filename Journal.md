@@ -6,3 +6,6 @@ I added ChangeNotifierProvider above MyApp so all screens can access the same Pa
 
 # Phase 3
 I created GuildHallRoster to display available adventurers and their gold costs. The Recruit button uses context.read to add an adventurer to PartyModel without listening for changes. context.watch is for widgets that need to rebuild when state changes.
+
+# Phase 4
+I created QuestPartySummary using Consumer to rebuild the UI when PartyModel changes. When Recruit is pressed, the model adds the adventurer and calls notifyListeners(), which triggers the summary to rebuild with the updated count and cost.
