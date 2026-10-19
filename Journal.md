@@ -9,3 +9,6 @@ I created GuildHallRoster to display available adventurers and their gold costs.
 
 # Phase 4
 I created QuestPartySummary using Consumer to rebuild the UI when PartyModel changes. When Recruit is pressed, the model adds the adventurer and calls notifyListeners(), which triggers the summary to rebuild with the updated count and cost.
+
+# Phase 5
+I tested recruiting and dismissing adventurers and checked that the party count and total cost updated correctly. I also tested an empty party and duplicate recruits. Provider and notifyListeners() let the summary update automatically without manually refreshing the UI.
