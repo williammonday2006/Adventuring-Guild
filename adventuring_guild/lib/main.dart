@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'party_model.dart';
+import 'guild_hall_roster.dart';
 
 void main() {
   runApp(
@@ -23,10 +23,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Welcome to the Adventuring Guild!'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Adventuring Guild'),
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
+        body: const GuildHallRoster(),
       ),
     );
   }
